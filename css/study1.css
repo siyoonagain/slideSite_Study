@@ -1,0 +1,87 @@
+/* ---------gogle font-style---------------
+ font-family: 'Raleway', sans-serif;
+ ------------------------------------------*/
+ /*-----------눈누폰트----------------------
+ font-family: 'ParkYongJun';
+  -----------------------------------------*/
+ @font-face {
+    font-family: 'ParkYongJun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/ParkYongJun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* reset */
+*{margin:0;padding:0;}
+a{text-decoration:none;color:inherit;}
+ul,ol{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:inherit;}
+b,strong,dt{font-weight:normal;}
+i,em,address{font-style:normal;font-weight:normal;}
+
+/* common */
+html{font-family: 'Raleway', sans-serif;font-size:14px;background:#ccc;}
+
+/* layout */
+.deco{display:none;}
+header{padding:50px 50px;padding-right:0px;width:100%;box-sizing: border-box;position:relative;}
+.station{}
+
+/* header */
+.snsL{margin-bottom:160px;color:#fff;}
+.snsL:after{content:"";display:block;clear:both;}
+.snsL > li{float:left;font-size:24px;margin-right:8px;transition:all 0.5 ease 0s;}
+.snsL > li:hover{transform:scale(1.5);}
+.snsL > li:last-of-type{margin-right:0;}
+
+.sliderTitle{display:flex;}
+.sliderTitle li{font-size:2rem;font-weight:200;margin-right:8px;color:#fff;}
+.sliderTitle li:hover{color:#000;}
+.sliderTitle li:last-of-type{margin-right:0;}
+.logo{position:absolute;top:50px;right:50px;}
+
+/* station */
+.station{width:100%;height:500px;overflow: hidden;padding-top:40px;}
+.train{width:4600px;height:100%;position:relative;left:0;transition:all 0.5s ease 0s;}
+.train:after{content:"";display:block;clear:both;}
+/* 비활성화 리스트 */
+.train li{width:180px;height:400px;margin:0 10px;float:left;background:#fff;border-radius:4px;box-shadow:3px 3px 3px #bbb;overflow: hidden;position:relative;transition:all 0.5s ease 0s;}
+.train > li >figure{height:300px;width:100%;opacity:1;}
+.train > li >figure img{width:100%;height:100%;object-fit:cover;}
+.train > li h2{z-index:10;position:absolute;width:100%;height:50px;background:#111;left:0;top:300px;transition:all 0.5s ease 0s;}
+.train > li h2 a{display:block;width:100%;height:100%;color:#fff;text-align:center;line-height:50px;transition:all 0.5s ease 0s;}
+.txt{display:none;color:#fff;background:#111;padding:10px;position:absolute;right:10px;bottom:10px;}
+.bntClosed{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    right: 27px;
+    top: 135px;
+    color: #fff;
+    cursor:pointer;
+    z-index:15;
+    pointer-events: auto;
+}
+.train > li >figure.bigPic{position:absolute;left:0;top:0;width:100%;height:200px;opacity:0;transition:all 0.5s ease 0s;}
+
+/* 활성화리스트 스타일 */
+.train li.on{width:780px;height:500px;transform:translateY(-40px);}
+.train > li.on >figure{opacity:0;}
+.train > li.on >.bigPic{opacity:1;height:500px;}
+.train > li.on h2{height:100px;top:100px;}
+.train > li.on h2 a{line-height:100px;font-size:1.5rem;}
+.train > li.on .txt{display:block;right:0;bottom:100px;color:#fff;background:#000;}
+.train > li.on .bntClosed{display:block;}
+.train > li.on .bntClosed:hover{background:#fff;color:#111;}
+.train > li.on .bigPic{opacity:1;}
+
+
+
+
+
+
+
+
+
+
+
+/*  */
